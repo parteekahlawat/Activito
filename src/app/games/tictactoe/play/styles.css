@@ -1,0 +1,75 @@
+/* Base styles for light mode */
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #f0f0f0;
+  color: #333;
+}
+
+.status {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border: 2px solid #000;
+  font-size: 36px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reset-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Dark mode styles */
+body.dark-mode .game {
+  background: #333;
+  color: #f0f0f0;
+}
+
+body.dark-mode .square {
+  background: #555;
+  border: 2px solid #888;
+  color: #f0f0f0;
+}
+
+body.dark-mode .reset-button {
+  background: #444;
+  color: #f0f0f0;
+  border: 1px solid #666;
+}
+
+/* Optional: Additional styling for dark mode transitions */
+body.dark-mode {
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode .square {
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode .reset-button {
+  transition: background 0.3s, color 0.3s;
+}

@@ -1,0 +1,20 @@
+body {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    background: black;
+    /* left: 10%; */
+    overflow-x: hidden;
+  }
+.game-info{
+  position: relative;
+  color: white;
+  top: 10rem;
+  left: 4rem;
+}
+.game-title{
+  font-size: 4rem;
+}
+.game-description{
+  font-size: 1.5rem;
+}
