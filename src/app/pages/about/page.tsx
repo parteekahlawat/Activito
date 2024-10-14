@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import './styles.css';
 import Developers from './card';
 import Navbar from '@/app/(comps)/header/page';
+import Footer from '@/app/(comps)/footer';
 
 const About = () => {
 //   const [darkMode, setDarkMode] = useState(false);
@@ -28,6 +29,7 @@ const About = () => {
       </button> */}
       <Developers/>
     </div>
+    <Footer/>
     </>
     
   );

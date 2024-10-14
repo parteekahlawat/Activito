@@ -2,13 +2,12 @@ body {
     position: relative;
     font-family: 'Poppins', sans-serif;
     position: relative;
-    background: black;
+    background: white;
     /* left: 10%; */
-    overflow-x: hidden;
   }
+
 .game-info{
   position: relative;
-  color: white;
   top: 10rem;
   left: 4rem;
 }
@@ -17,16 +16,4 @@ body {
 }
 .game-description{
   font-size: 1.5rem;
-  width: 90vw;
-}
-.play-button{
-  margin: 2rem;
-  /* padding-inline: 5rem; */
-  /* background: white; */
-  color: white;
-  
-}
-.play{
-  border: 2px solid white;
-  margin: 2rem;
 }

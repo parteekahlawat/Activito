@@ -19,7 +19,7 @@ const InfoPage: React.FC<InfoPage> = ({title, description, route})=>{
     <>
     <div className="quizgame ">
     <Navbar/>
-    <div className="game-info ">
+    <div className="game-info">
       <div className="game-title">{title}</div>
       <div className="game-description" dangerouslySetInnerHTML={{ __html: description }} />
       <Button className="play">

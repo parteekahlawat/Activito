@@ -1,0 +1,164 @@
+.m2 {
+    position: relative;
+    width: 20vmin;
+    height: 20vmin;
+    background: linear-gradient(135deg, #1e1e24 10%, #050505 60%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    animation: gradient-shift 3s ease-in-out infinite; /* Faster animation */
+    background-size: 200% 200%;
+    /* border-radius: 2rem; */
+  }
+  
+  .m2::before,
+  .m2::after {
+    --size: 5px;
+    content: "";
+    position: absolute;
+    top: calc(var(--size) / -2);
+    left: calc(var(--size) / -2);
+    border-radius: 2rem;
+    width: calc(100% + var(--size));
+    height: calc(100% + var(--size));
+    background: radial-gradient(circle at 0 0, hsl(27deg 93% 60%), transparent),
+      radial-gradient(circle at 100% 0, #00a6ff, transparent),
+      radial-gradient(circle at 0 100%, #ff0056, transparent),
+      radial-gradient(circle at 100% 100%, #6500ff, transparent);
+  }
+  
+  .m2::after {
+    --size: 2px; /* Reduced inner glow size */
+    z-index: -1;
+  }
+  
+  .m2::before {
+    --size: 10px; /* Reduced outer glow size */
+    z-index: -2;
+    filter: blur(2vmin); /* Reduced blur */
+    animation: blur-animation 3s ease-in-out alternate infinite; /* Faster blur animation */
+  }
+  
+  /* Faster blur animation */
+  @keyframes blur-animation {
+    to {
+      filter: blur(3vmin);
+      transform: scale(1.05);
+    }
+  }
+  
+  /* Faster gradient animation */
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+
+
+  button {
+    position: relative;
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    padding: 1rem 3rem;
+    transition: 0.2s;
+  }
+  
+  button:hover {
+    letter-spacing: 0.2rem;
+    padding: 1.1rem 3.1rem;
+    background: var(--clr);
+    color: var(--clr);
+    /* box-shadow: 0 0 35px var(--clr); */
+    animation: box 3s infinite;
+  }
+  
+  button::before {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: #272822;
+  }
+  
+  button span {
+    position: relative;
+    z-index: 1;
+  }
+  button i {
+    position: absolute;
+    inset: 0;
+    display: block;
+  }
+  
+  button i::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    left: 80%;
+    top: -2px;
+    border: 2px solid var(--clr);
+    background: #272822;
+    transition: 0.2s;
+  }
+  
+  button:hover i::before {
+    width: 15px;
+    left: 20%;
+    animation: move 3s infinite;
+  }
+  
+  button i::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    left: 20%;
+    bottom: -2px;
+    border: 2px solid var(--clr);
+    background: #272822;
+    transition: 0.2s;
+  }
+  
+  button:hover i::after {
+    width: 15px;
+    left: 80%;
+    animation: move 3s infinite;
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes box {
+    0% {
+      box-shadow: #27272c;
+    }
+    50% {
+      box-shadow: 0 0 25px var(--clr);
+    }
+    100% {
+      box-shadow: #27272c;
+    }
+  }
+  

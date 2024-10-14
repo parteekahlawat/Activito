@@ -13,7 +13,7 @@ const developers = [
   },
   {
     name: "Yamini",
-    role: "Backend Developer",
+    role: "Frontend Developer",
     image: "/images/bob.jpg",  // Path to developer's image
     description: ""
   }
