@@ -15,9 +15,8 @@ const styles = {
   // overflow: "hidden",
 // padding: "2rem",
 margin: "1.5rem",
-width: "13vw",
-// Height: "auto",
-minHeight: "25vh"
+minHeight: "25vh",
+minWidth: "20vw"
 };
 
 const Card: React.FC<CardProps> = ({ title, description, link }) => {
@@ -35,7 +34,7 @@ const Card: React.FC<CardProps> = ({ title, description, link }) => {
         <p className="mb-3 font-normal text-gray-300 transition-colors duration-300">
           {description}
         </p>
-        {/* <a
+        <a
           href={link}
           className="
             inline-flex 
@@ -73,8 +72,7 @@ const Card: React.FC<CardProps> = ({ title, description, link }) => {
               d="M1 5h12m0 0L9 1m4 4L9 9"
             />
           </svg>
-        </a> */}
-        <button style={{color:"#39FF14"}}><span>Button</span><i></i></button>
+        </a>
 
           </div>
       </div>
